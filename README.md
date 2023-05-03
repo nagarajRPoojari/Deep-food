@@ -16,9 +16,8 @@ achieves  accuracy of __80%__ .
 
 ## Sample tests
 
-<img src="https://user-images.githubusercontent.com/116948655/235907158-cfcb4370-bad2-4f1a-ac7e-f9bba05620fe.png" width="300" height="300">
+![now](https://user-images.githubusercontent.com/116948655/235911294-f925e8d1-99d5-4ad6-8766-7edaa4f65fd0.png)
 
-<img src="https://user-images.githubusercontent.com/116948655/235908787-9d68c2a6-32fc-4b8f-8dff-00a1546685c8.png" width="300" height="300">
 
 
 
