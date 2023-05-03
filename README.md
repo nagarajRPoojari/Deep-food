@@ -15,7 +15,7 @@ Deep-Food is a Convolutional neural network model for multiclass image classific
 
 ## Sample tests
 
-![Screenshot 2023-05-03 171351](https://user-images.githubusercontent.com/116948655/235907158-cfcb4370-bad2-4f1a-ac7e-f9bba05620fe.png =250x250)
+![Screenshot 2023-05-03 171351](https://user-images.githubusercontent.com/116948655/235907158-cfcb4370-bad2-4f1a-ac7e-f9bba05620fe.png)
 
 
 
