@@ -4,7 +4,8 @@
 ### Food image classification model using EfficientNetB0 
 
 Deep-Food is a Convolutional neural network model for multiclass image classification . It uses 
-[EfficientNetB0](https://arxiv.org/abs/1905.11946) pre trained model achieves and accuracy of __80%__ .
+[EfficientNetB0](https://arxiv.org/abs/1905.11946) pre trained model and ![Screenshot 2023-05-03 171518](https://user-images.githubusercontent.com/116948655/235908648-929d9c51-ced3-45da-9c87-c626c193137f.png)
+achieves  accuracy of __80%__ .
 
 ###
 
