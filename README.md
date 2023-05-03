@@ -11,10 +11,10 @@ achieves  accuracy of __80%__ .
 
 ## Architecture
 
-<img src="https://user-images.githubusercontent.com/116948655/235911765-af644520-6188-4b81-ad3f-f2a6fcbd1dd6.png"  height="300" >
+<img src="https://user-images.githubusercontent.com/116948655/235911765-af644520-6188-4b81-ad3f-f2a6fcbd1dd6.png"  height="200" >
 
 ### EfficientNetB0
-<img src="https://iq.opengenus.org/content/images/2022/11/Architecture-of-EfficientNet-B0-with-MBConv-as-Basic-building-blocks.png"  height="300">
+<img src="https://iq.opengenus.org/content/images/2022/11/Architecture-of-EfficientNet-B0-with-MBConv-as-Basic-building-blocks.png"  height="200">
 
 
 
