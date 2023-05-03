@@ -1,4 +1,4 @@
-![ice_cream](https://user-images.githubusercontent.com/116948655/235905463-9b5a3e87-57dc-4108-9d18-7d4ad60e7bcc.jpg)
+
 
 # Deep-Food
 ### Food image classification model using EfficientNetB0 
@@ -8,19 +8,14 @@ Deep-Food is a Convolutional neural network model for multiclass image classific
 
 ###
 
-
-
-
-
-
-
-
 ## Architecture
 
 ![EfficientNetB0 model](https://iq.opengenus.org/content/images/2022/11/Architecture-of-EfficientNet-B0-with-MBConv-as-Basic-building-blocks.png)
 
 
-![Alt text](https://github.com/nagarajRPoojari/Deep-food/blob/main/test_1.webp)
+## Sample tests
+
+![Screenshot 2023-05-03 171351](https://user-images.githubusercontent.com/116948655/235907158-cfcb4370-bad2-4f1a-ac7e-f9bba05620fe.png =250x250)
 
 
 
