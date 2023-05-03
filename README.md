@@ -1,3 +1,4 @@
+![ice_cream](https://user-images.githubusercontent.com/116948655/235905463-9b5a3e87-57dc-4108-9d18-7d4ad60e7bcc.jpg)
 
 # Deep-Food
 ### Food image classification model using EfficientNetB0 
