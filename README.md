@@ -39,7 +39,7 @@ model_1.compile(loss='sparse_categorical_crossentropy' , optimizer='adam', metri
 ```
 ### Load weights
 ```python
-model_1.load_weights('food_vision_fine_tune_checkpoint)
+model_1.load_weights('food_vision_fine_tune_checkpoint')
 ```
 
 ## Sample tests
