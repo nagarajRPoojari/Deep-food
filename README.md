@@ -20,6 +20,7 @@ achieves  accuracy of __80%__ .
 
 
 
+![now3](https://user-images.githubusercontent.com/116948655/235911765-af644520-6188-4b81-ad3f-f2a6fcbd1dd6.png)
 
 
 
