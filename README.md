@@ -10,12 +10,13 @@ Deep-Food is a Convolutional neural network model for multiclass image classific
 
 ## Architecture
 
-![EfficientNetB0 model](https://iq.opengenus.org/content/images/2022/11/Architecture-of-EfficientNet-B0-with-MBConv-as-Basic-building-blocks.png)
+![EfficientNetB0 model](https://iq.opengenus.org/content/images/2022/11/Architecture-of-EfficientNet-B0-with-MBConv-as-Basic-building-blocks.png )
 
 
 ## Sample tests
 
-![Screenshot 2023-05-03 171351](https://user-images.githubusercontent.com/116948655/235907158-cfcb4370-bad2-4f1a-ac7e-f9bba05620fe.png)
+<img src="https://user-images.githubusercontent.com/116948655/235907158-cfcb4370-bad2-4f1a-ac7e-f9bba05620fe.png" width="100" height="100">
+
 
 
 
