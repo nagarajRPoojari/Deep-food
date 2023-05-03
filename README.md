@@ -17,7 +17,10 @@ achieves  accuracy of __80%__ .
 ## Sample tests
 
 <img src="https://user-images.githubusercontent.com/116948655/235907158-cfcb4370-bad2-4f1a-ac7e-f9bba05620fe.png" width="300" height="300">
-<img src="https://user-images.githubusercontent.com/116948655/235908292-c3e1a876-2999-42a4-9f9a-b592d5c554f7.png" width="300" height="300">
+
+<img src="https://user-images.githubusercontent.com/116948655/235908787-9d68c2a6-32fc-4b8f-8dff-00a1546685c8.png" width="300" height="300">
+
+
 
 
 
