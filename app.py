@@ -1,12 +1,12 @@
 import streamlit as st
-import tensorflow as tf
+
 from matplotlib import image as mpimg
 from matplotlib import pyplot as plt
 from helper_functions import get_model , predict , class_names
 from PIL import Image 
     
 
-from tensorflow.keras import layers
+
 
 
 @st.cache_resource
