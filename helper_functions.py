@@ -221,60 +221,19 @@ def compare_historys(original_history, new_history, initial_epochs=5):
     plt.title('Training and Validation Loss')
     plt.xlabel('epoch')
     plt.show()
-  
-# Create function to unzip a zipfile into current working directory 
-# (since we're going to be downloading and unzipping a few files)
+
 import zipfile
 
 def unzip_data(filename):
-  """
-  Unzips filename into the current working directory.
-  Args:
-    filename (str): a filepath to a target zip folder to be unzipped.
-  """
+
   zip_ref = zipfile.ZipFile(filename, "r")
   zip_ref.extractall()
   zip_ref.close()
 
-# Walk through an image classification directory and find out how many files (images)
-# are in each subdirectory.
-import os
 
-def walk_through_dir(dir_path):
-  """
-  Walks through dir_path returning its contents.
-  Args:
-    dir_path (str): target directory
-  
-  Returns:
-    A print out of:
-      number of subdiretories in dir_path
-      number of images (files) in each subdirectory
-      name of each subdirectory
-  """
-  for dirpath, dirnames, filenames in os.walk(dir_path):
-    print(f"There are {len(dirnames)} directories and {len(filenames)} images in '{dirpath}'.")
-    
-# Function to evaluate: accuracy, precision, recall, f1-score
-from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 
-def calculate_results(y_true, y_pred):
-  """
-  Calculates model accuracy, precision, recall and f1 score of a binary classification model.
-  Args:
-      y_true: true labels in the form of a 1D array
-      y_pred: predicted labels in the form of a 1D array
-  Returns a dictionary of accuracy, precision, recall, f1-score.
-  """
-  # Calculate model accuracy
-  model_accuracy = accuracy_score(y_true, y_pred) * 100
-  # Calculate model precision, recall and f1 score using "weighted average
-  model_precision, model_recall, model_f1, _ = precision_recall_fscore_support(y_true, y_pred, average="weighted")
-  model_results = {"accuracy": model_accuracy,
-                  "precision": model_precision,
-                  "recall": model_recall,
-                  "f1": model_f1}
-  return 
+
+
 
 
 
@@ -306,3 +265,75 @@ def predict_for(model, class_names ,path=None , url=None):
     res=class_names[int(tf.argmax(res_1,axis=1))]
     
     plt.title("predicted : "+res)
+    
+    
+
+
+from tensorflow.keras import layers
+def get_model():
+  input_shape=(224,224,3)
+  base_model=tf.keras.applications.EfficientNetB0(include_top=False)
+  base_model.trainable=False
+  inputs=layers.Input(input_shape, name='input_layer')
+  x=base_model(inputs, training=False)
+  x=layers.GlobalAveragePooling2D(name='Global_avg_pooling_2D')(x)
+  x=layers.Dense(101)(x)
+  output = layers.Activation("softmax", dtype=tf.float32, name="softmax_float32")(x) 
+  model_1=tf.keras.Model(inputs,output)
+  model_1.compile(loss='sparse_categorical_crossentropy' , optimizer='adam', metrics=['accuracy'])
+  return model_1
+
+
+def predict(model, class_names ,path=None , url=None):
+  img=None
+  if path:
+      img=mpimg.imread(path)
+  else :
+      img=np.array(PIL.Image.open(urllib.request.urlopen(url)))
+    
+    
+  img=tf.image.resize(img,(224,224))
+    
+  res_1=model.predict(tf.expand_dims(img, axis=0))
+  res=class_names[int(tf.argmax(res_1,axis=1))]
+  
+  return res , img 
+  
+  
+  
+class_names=["apple_pie"	  , "eggs_benedict"	  ,   "onion_rings",
+"baby_back_ribs" , "escargots"	 ,  "oysters",
+"baklava"	 , "falafel"	 ,  "pad_thai",
+"beef_carpaccio	"  , "filet_mignon" ,  "paella",
+"beef_tartare" , "fish_and_chips" ,  "pancakes",
+"beet_salad" , "foie_gras"	 ,  "panna_cotta",
+"beignets" , "french_fries" ,  "peking_duck",
+"bibimbap" , "french_onion_soup" ,  "pho",
+"bread_pudding" , "french_toast" ,  "pizza",
+"breakfast_burrito " , "fried_calamari" ,  "pork_chop",
+"bruschetta" , "fried_rice"	 ,  "poutine",
+"caesar_salad" , "frozen_yogurt" ,  "prime_rib",
+"cannoli" , "garlic_bread" ,  "pulled_pork_sandwich",
+"caprese_salad" , "gnocchi"	 ,  "ramen",
+"carrot_cake" , "greek_salad"	 ,  "ravioli",
+"ceviche"	 , "grilled_cheese_sandwich" , "red_velvet_cake",
+"cheesecake" , "grilled_salmon" ,  "risotto",
+"cheese_plate" , "guacamole"	 ,  "samosa",
+"chicken_curry" , "gyoza"	 ,  "sashimi",
+"chicken_quesadilla" , "hamburger"	 ,  "scallops",
+"chicken_wings" , "hot_and_sour_soup" ,  "seaweed_salad",
+"chocolate_cake" , "hot_dog"	 ,  "shrimp_and_grits",
+"chocolate_mousse" ,   "huevos_rancheros" ,  "spaghetti_bolognese",
+"churros"	 , "hummus"	 ,  "spaghetti_carbonara",
+"clam_chowder" , "ice_cream"	 ,  "spring_rolls",
+"club_sandwich" , "lasagna"	 ,  "steak",
+"crab_cakes" , "lobster_bisque" ,  "strawberry_shortcake",
+"creme_brulee" , "lobster_roll_sandwich"  , "sushi",
+"croque_madame" , "macaroni_and_cheese"   ,  "tacos",
+"cup_cakes" , "macarons"	 ,  "takoyaki",
+"deviled_eggs" , "miso_soup"	 ,  "tiramisu",
+"donuts"	 , "mussels"	 ,  "tuna_tartare",
+"dumplings" , "nachos"	 ,  "waffles",
+"edamame"	 , "omelette"]
+
+class_names=sorted(class_names)
