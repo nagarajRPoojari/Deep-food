@@ -11,7 +11,7 @@ from PIL import Image
 
 @st.cache_resource
 def load_model():
-    tf.get_logger().setLevel('ERROR')    
+   
     model_1=get_model()
     model_1.load_weights('model_weights/model_1')
     return model_1
