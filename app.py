@@ -42,10 +42,9 @@ if st.button("Predict") :
     if file is None :
         st.warning("Please upload image")
     else :
-        res,img, top_5 ,values=predict(model,class_names,path=file)
+        res,img, confidence=predict(model,class_names,path=file)
         st.subheader(res)
-        for i in range(len(top_5)):
-            st.progress(int(values[i]) , text=class_names[i]+"    "+str(int(values[i]))+"%")
+        st.progress(confidence , text=str(confidence)+"%")
         st.image(file , width=400)
             
     
