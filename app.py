@@ -6,8 +6,21 @@ from helper_functions import get_model , predict , class_names
 from PIL import Image 
     
 
+sd=st.sidebar
 
 
+sd.title("What is DeepFood ?")
+sd.write(""" 
+DeepFood is an end to end CNN model for food image classification capable of identifying 101 defferent foods.
+""")
+
+sd.write("""
+**Accuracy :** **`80%`**
+
+**Model :** **`EfficientNetB0`**
+
+**Dataset :** **`Food101`**
+""")
 
 @st.cache_resource
 def load_model():
@@ -18,18 +31,23 @@ def load_model():
 
 model=load_model()
 
-st.title("Hi! , Welcome to DeepFood")
+st.title("Hi! , Welcome to DeepFood 🍕🍔")
+st.write("To know more about this app, visit [**GitHub**](https://github.com/nagarajRPoojari/Deep-food)")
 
 file=st.file_uploader("upload image ", ['jpg', 'png','jpeg','jfif'])
+
 
 
 if st.button("Predict") :
     if file is None :
         st.warning("Please upload image")
     else :
-        res,img=predict(model,class_names,path=file)
-        st.subheader(res.upper())
-        st.image(file , width=500)
+        res,img, class_names ,cdfs=predict(model,class_names,path=file)
+        st.subheader(res)
+        for i in range(len(class_names)):
+            st.progress(int(cdfs[i]) , text=class_names[i]+"    "+str(int(cdfs[i]))+"%")
+        st.image(file , width=400)
+            
     
 
 

@@ -296,8 +296,12 @@ def predict(model, class_names ,path=None , url=None):
     
   res_1=model.predict(tf.expand_dims(img, axis=0))
   res=class_names[int(tf.argmax(res_1,axis=1))]
-  
-  return res , img 
+  top_5_i = sorted((res_1.argsort())[0][-3:][::-1] , reverse=True)
+  values = sorted(res_1[0][top_5_i] * 100 , reverse=True)
+  top_5=[]
+  for i in top_5_i:
+    top_5.append(class_names[i])
+  return res , img , top_5, values
   
   
   
