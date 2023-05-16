@@ -46,7 +46,7 @@ model_1.load_weights('food_vision_fine_tune_checkpoint')
 
 ## Sample tests
 
-![now](https://user-images.githubusercontent.com/116948655/235911294-f925e8d1-99d5-4ad6-8766-7edaa4f65fd0.png)
+![now](https://github.com/nagarajRPoojari/Deep-food/blob/main/app_image.png)
 
 
 
