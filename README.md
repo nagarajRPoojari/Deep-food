@@ -1,5 +1,6 @@
 
 
+
 # Deep-Food
 ### Food image classification model using EfficientNetB0 
 
@@ -46,7 +47,7 @@ model_1.load_weights('food_vision_fine_tune_checkpoint')
 
 ## Sample tests
 
-![now](https://github.com/nagarajRPoojari/Deep-food/blob/main/app_image.png)
+![app_image](https://github.com/nagarajRPoojari/Deep-food/assets/116948655/27c4495c-b1c2-4ef0-8d2d-15066e0b8f49)
 
 
 
