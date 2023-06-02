@@ -3,12 +3,15 @@
 
 # Deep-Food
 ### Food image classification model using EfficientNetB0 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## View web app [here](https://nagarajrpoojari-deep-food-app-mouwg8.streamlit.app/)
 
 Deep-Food is a Convolutional neural network model for multiclass image classification . It uses 
 [EfficientNetB0](https://arxiv.org/abs/1905.11946) pre trained model and 
 achieves  accuracy of __80%__ .
+
+
 
 ###
 
@@ -49,7 +52,8 @@ model_1.load_weights('food_vision_fine_tune_checkpoint')
 
 ![app_image](https://github.com/nagarajRPoojari/Deep-food/assets/116948655/27c4495c-b1c2-4ef0-8d2d-15066e0b8f49)
 
-
+## License
+Project is distributed under [MIT license](https://github.com/nagarajRPoojari/Deep-food/LICENSE).
 
 
 
